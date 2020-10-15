@@ -80,5 +80,10 @@ body{
 
 
 }
+@media (max-width: 544px){
+	.form{
+		margin-right:50px;
+	}
+}
 
  
