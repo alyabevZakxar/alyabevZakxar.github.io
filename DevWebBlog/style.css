@@ -1,0 +1,43 @@
+.cont{
+text-align: center;
+font-family: sans-serif;
+font-weight: bold;
+font-size: 3rem;
+margin-top: 5rem;
+}
+.text{
+	font-weight: normal;
+	font-size: 1.3rem;
+	margin-top: 1.5rem;
+    text-transform: uppercase;
+}
+.img-p{
+	width: 50%;
+	border-radius: 1rem;
+	margin-top: 3rem;
+
+}
+.carosel-item{
+	height: 30rem;
+}
+.carosel-item img{
+	height: 30rem;
+}
+
+ hr {
+    border: none; /* Убираем границу */
+    background-color: #696969; /* Цвет линии */
+    color:#696969 ; /* Цвет линии для IE6-7 */
+    height: 5px; /* Толщина линии */
+   }
+@media(max-width: 800px){
+	.cont{
+		font-size: 2rem;
+	}
+	.text{
+		font-size: 1rem;
+	}
+	.img-p{
+		width: 80%;
+	}
+}
