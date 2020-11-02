@@ -1,0 +1,198 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, 'Comic Sans MS';
+}
+.header{
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
+}
+.header-overlay{
+   position: absolute;
+   left:0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #fff;
+}
+.nav-container{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 1300px;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 50px;
+   margin: 0 auto;
+}
+@media(max-width: 768px){
+  .nav-container{
+   padding-left: 15px;
+   padding-right:15px;
+  }
+}
+.logo{
+   font-size: 32px;
+   font-weight: 800;
+   color: #000;
+   letter-spacing: 2px;
+}
+
+.nav-wrapper{
+
+}
+/*......................Desktop navigation.....................*/
+.nav{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+
+}
+/*условие для экранов от 0 до 1000 пк*/
+@media(max-width: 1000px){
+  .nav{
+   display: none;
+  }
+}
+
+
+.nav-item{
+   margin-right: 50px;
+}
+.nav-item:last-child{
+	 margin-right: 0px;/*...........Убераем последний отступю..........*/
+}
+
+
+
+.nav-link{
+   font-size: 15px;
+   font-weight: 500;
+   color: #000;
+   text-decoration: none;
+   text-transform: uppercase;
+   padding: 10px 15px;
+}
+
+.nav-link:hover{
+   background: #ffea00;
+}
+/*button*/
+
+.menu-icon{
+   display: none;
+   z-index: 19;
+   position: relative;
+   
+   width: 30px;
+   height: 30px;
+   cursor: pointer;
+}
+/*условие для экранов от 0 до 1000 пк*/
+@media(max-width: 1000px){
+  .menu-icon{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+}
+.menu-icon-line{
+   position: relative;
+   width: 30px;
+   height: 5px;
+   background-color: #000;
+}
+
+.menu-icon-line::before{
+   position: absolute;
+   left: 0;
+   top:-10px;
+   content: '';
+   width: 30px;
+   height: 5px;
+   background-color: #000;
+   transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+.menu-icon-line::after{
+   position: absolute;
+   left: 0;
+   top: 10px;
+   content: '';
+   width: 30px;
+   height: 5px;
+   background-color: #000;
+   transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+.menu-icon.menu-icon-active .menu-icon-line{
+   background-color: transparent;
+}
+.menu-icon.menu-icon-active .menu-icon-line::before{
+   transform: rotate(45deg);
+   top:0;
+   transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+.menu-icon.menu-icon-active .menu-icon-line::after{
+   transform: rotate(-45deg);
+   top:0;
+   transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+/*..................Мобильная навигация...................*/
+
+.mobile-nav{
+   z-index: 9;
+   display: block;
+   position: absolute;
+   right:-350px;
+   top: 0;
+   height: 100%;
+   width: 350px;
+   background-color: #f6f6f6;
+   padding: 50px;
+   transition: transform 0.4s ease-in;
+}
+@media(max-width: 768px){
+  .mobile-nav{
+   width: 320px;
+   right: -320px;
+  }
+}
+.mobile-nav-active{
+   transform: translateX(-100%);
+}
+
+.mobile-nav-title{
+   font-size: 28px;
+   font-weight: 800;
+   margin-bottom: 30px;
+   color: #f6d142;
+}
+.mobile-nav-list{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+
+}
+
+.mobile-nav-item{
+  margin-bottom: 30px;
+}
+
+.mobile-nav-link{
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 5px 10px;
+}
+.mobile-nav-link:hover{
+   background: #ffea00;
+}

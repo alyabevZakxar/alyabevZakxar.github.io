@@ -1,0 +1,52 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, 'Comic Sans MS';
+}
+
+header{
+	width: 100%;
+	
+}
+.wrapper{
+	width: 90%;
+	margin: 0 auto;
+	padding-top: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.logo{
+   font-size: 32px;
+   font-weight: bold;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+}
+/*......................Desktop navigation.....................*/
+.nav{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+
+}
+
+.nav-item{
+   margin-right: 50px;
+}
+.nav-item:last-child{
+	margin-right: 0px; /*...........Убераем последний отступю..........*/
+}
+.nav-link{
+   font-size: 17px;
+   font-weight: 600;
+   color: #000;
+   text-decoration: none;
+   text-transform: uppercase;
+}
